@@ -1,0 +1,36 @@
+#timer_buttons{
+    margin-top: 70px;
+    > button { 
+        font-size: 25px;
+    }
+    #reset_timer {
+        color: $second_text_light;
+        transition: all .5s ease;
+        &:hover{
+            transform: rotate(-360deg);
+        }
+    }
+    #start_timer{
+        background-color: $main_btn_bg;
+        color: $main_btn_text ;
+        border: 0;
+        &:hover{
+            border: 0;
+            box-shadow: 0 0 13px 0 $btn_shadow_color;
+        }
+    }
+    #stop_timer{
+        // display: none;
+        visibility: hidden;
+        transition: all .3s ease-in;
+        // transform: translateX(-135px);
+        >i { 
+            position: relative;
+            transition: .25s ease;
+            color: #bd1033;
+            &:hover{
+                color:#da2549;
+            }
+        }
+    }
+}

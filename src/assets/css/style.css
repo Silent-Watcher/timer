@@ -1,0 +1,143 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans&family=Edu+SA+Beginner&family=Edu+TAS+Beginner&family=Edu+VIC+WA+NT+Beginner&family=Source+Sans+Pro:wght@300&display=swap");
+* {
+  font-family: "DM Sans";
+}
+
+body {
+  background-color: #232323;
+  color: #5375db;
+}
+
+::-moz-selection {
+  background-color: #86a2f5;
+  color: #232323;
+}
+
+::selection {
+  background-color: #86a2f5;
+  color: #232323;
+}
+
+@media screen and (max-width: 991px) {
+  #main_heading {
+    font-size: 60px !important;
+  }
+}
+@media screen and (max-width: 768px) {
+  #main_heading {
+    font-size: 50px !important;
+  }
+}
+@media screen and (max-width: 326px) {
+  #main_heading {
+    font-size: 30px !important;
+  }
+}
+@media screen and (max-width: 992px) {
+  #timer_input {
+    margin-top: 20px !important;
+  }
+  #timer_input > input {
+    font-size: 45px !important;
+  }
+}
+@media screen and (max-width: 326px) {
+  #timer_input {
+    margin-top: 10px !important;
+  }
+  #timer_input > input {
+    font-size: 25px !important;
+  }
+}
+@media (max-width: 333px) {
+  #copyright {
+    font-size: 12px !important;
+  }
+}
+@media (max-width: 326px) {
+  #timer_buttons > button {
+    font-size: 14px !important;
+  }
+}
+@media (min-width: 1400px) {
+  #timer_emoji {
+    right: 38.2% !important;
+  }
+}
+.custom-tooltip {
+  --bs-tooltip-bg: var(--bs-primary);
+}
+
+#main_heading {
+  font-size: 80px;
+  margin-top: 150px;
+}
+#main_heading #timer_emoji {
+  top: -3%;
+  right: 36.2%;
+  cursor: pointer;
+}
+
+#timer_input {
+  margin-top: 70px;
+  font-size: 60px;
+}
+#timer_input > input {
+  outline: 0;
+  color: #f5f5f5;
+  -moz-appearance: textfield;
+}
+#timer_input > input::-webkit-outer-spin-button, #timer_input > input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+#timer_buttons {
+  margin-top: 70px;
+}
+#timer_buttons > button {
+  font-size: 25px;
+}
+#timer_buttons #reset_timer {
+  color: #f5f5f5;
+  transition: all 0.5s ease;
+}
+#timer_buttons #reset_timer:hover {
+  transform: rotate(-360deg);
+}
+#timer_buttons #start_timer {
+  background-color: #5375db;
+  color: #f5f5f5;
+  border: 0;
+}
+#timer_buttons #start_timer:hover {
+  border: 0;
+  box-shadow: 0 0 13px 0 #86a2f5;
+}
+#timer_buttons #stop_timer {
+  visibility: hidden;
+  transition: all 0.3s ease-in;
+}
+#timer_buttons #stop_timer > i {
+  position: relative;
+  transition: 0.25s ease;
+  color: #bd1033;
+}
+#timer_buttons #stop_timer > i:hover {
+  color: #da2549;
+}
+
+#copyright {
+  color: #f5f5f5;
+  padding-top: 60px;
+}
+#copyright > span {
+  color: #5375db;
+}
+#copyright > a {
+  color: #f5f5f5;
+  transition: 0.5s ease;
+}
+#copyright > a:hover {
+  color: #5375db;
+}/*# sourceMappingURL=style.css.map */

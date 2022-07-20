@@ -1,0 +1,14 @@
+#timer_input {
+    margin-top: 70px;
+    font-size: 60px;
+    > input {
+        outline: 0;
+        color:$second_text_light;
+        -moz-appearance: textfield;
+        &::-webkit-outer-spin-button,&::-webkit-inner-spin-button{
+            -webkit-appearance: none;
+            margin: 0;
+        }
+    }
+
+}
