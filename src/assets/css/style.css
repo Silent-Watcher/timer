@@ -140,4 +140,13 @@ body {
 }
 #copyright > a:hover {
   color: #5375db;
+}
+
+#cursor {
+  width: 10px;
+  top: 0;
+  left: 0;
+  height: 10px;
+  background-color: #5375db;
+  transition: all 0.2s linear;
 }/*# sourceMappingURL=style.css.map */

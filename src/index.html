@@ -15,9 +15,10 @@
       <link rel="stylesheet" href="assets/css/style.css">
     </head>
   </html>
-  <body class="vh-100 overflow-hidden">
+  <body class="vh-100">
     <div class="container-fluid"> 
       <div class="container"> 
+        <div class="position-absolute rounded-circle" id="cursor"> </div>
         <div class="row text-center">
           <h1 class="fw-bold position-relative user-select-none animate__animated animate__bounce" id="main_heading">Welcome to timer.js<span class="fs-3 position-absolute" id="timer_emoji">⏱️</span></h1>
         </div>
@@ -31,7 +32,7 @@
         <div class="row"> 
           <section class="col-8 offset-2 col-md-6 offset-md-3 col-lg-4 offset-lg-4 d-flex justify-content-around" id="timer_buttons">
             <button class="btn d-inline-flex align-items-center position-relative animate__animated animate__tada" id="start_timer"> <i class="fa-solid fa-play"></i></button>
-            <button class="bg-transparent border-0 p-0" id="stop_timer"><i class="fa-solid fa-stop"></i></button>
+            <button class="bg-transparent border-0 p-0" id="stop_timer"> <i class="fa-solid fa-stop"></i></button>
             <button class="btn btn-primary bg-transparent border-0 d-inline-flex align-items-center" id="reset_timer" data-bs-toggle="tooltip" data-bs-title="Reset timer" data-bs-custom-class="custom-tooltip"> <i class="fa-solid fa-arrow-rotate-left"></i></button>
           </section>
         </div>

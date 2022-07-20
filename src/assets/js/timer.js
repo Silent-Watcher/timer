@@ -5,6 +5,7 @@ let timer_emoji = document.getElementById('timer_emoji');
 let hour = document.getElementById('hour');
 let minute = document.getElementById('minute');
 let second = document.getElementById('second');
+const cursor =document.getElementById('cursor');
 
 const tooltipTriggerList = document.querySelectorAll(
   '[data-bs-toggle="tooltip"]'
@@ -148,3 +149,10 @@ function startTimer() {
     });
   }, 1000);
 }
+
+// custom cursor
+document.addEventListener('mousemove',e=>{
+  console.log(e.pageX,e.pageY);
+  cursor.style.top = `${e.pageY}px`;
+  cursor.style.left= `${e.pageX}px`;
+})
