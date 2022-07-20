@@ -6,6 +6,7 @@
 body {
   background-color: #232323;
   color: #5375db;
+  overflow-x: hidden;
 }
 
 ::-moz-selection {

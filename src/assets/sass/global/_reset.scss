@@ -4,6 +4,7 @@
 body { 
     background-color: $main_dark_bg;
     color: $main_text;
+    overflow-x: hidden;
 }
 ::selection{
     background-color: $selection_bg;
