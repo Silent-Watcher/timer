@@ -74,7 +74,7 @@ function startTimer() {
   //
   // show alert msg
   function fireAlert(msg, status) {
-    validStatus = ['info', 'success', 'error', 'warning', 'info'];
+    let validStatus = ['info', 'success', 'error', 'warning', 'info'];
     if (!validStatus.includes(status))
       throw new Error('invalid status for fireAlert function');
     Toast.fire({
