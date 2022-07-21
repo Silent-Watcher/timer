@@ -71,13 +71,13 @@ function startTimer() {
     }
 
     function reset() {
-      body.style.overflowY = 'visibile';
       minute.value = initialValue;
       second.value = initialValue;
       hour.value = initialValue;
       stopTimer();
       stop_btn.style.visibility = 'hidden';
       appearStartBtn();
+      body.style.overflowY = 'auto';
     }
     function stopTimer() {
       clearInterval(timerIntervalId);
