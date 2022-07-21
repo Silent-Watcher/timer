@@ -1,4 +1,5 @@
 const body = document.body;
+const header = document.getElementById('main_heading');
 // buttons
 let start_btn = document.getElementById('start_timer');
 let stop_btn = document.getElementById('stop_timer');
@@ -11,6 +12,8 @@ let minute = document.getElementById('minute');
 let second = document.getElementById('second');
 // cursor element
 const cursor = document.getElementById('cursor');
+// timer audio
+const timerAudio = document.getElementById('timer_audio');
 // tooltip initialization
 const tooltipTriggerList = document.querySelectorAll(
   '[data-bs-toggle="tooltip"]'
@@ -31,7 +34,7 @@ document.addEventListener('mousemove', (e) => {
   cursor.style.top = `${e.pageY}px`;
   cursor.style.left = `${e.pageX}px`;
 });
-// 
+//
 start_btn.addEventListener('click', () => {
   body.style.overflowY = 'hidden';
   appearStopBtn();
@@ -39,58 +42,49 @@ start_btn.addEventListener('click', () => {
 });
 
 function startTimer() {
-  const timerIntervalId = setInterval(() => {
-    // toast initialization
-    const Toast = Swal.mixin({
-      toast: true,
-      position: 'top-end',
-      showConfirmButton: false,
-      timer: 3000,
-      timerProgressBar: true,
-      didOpen: (toast) => {
-        toast.addEventListener('mouseenter', Swal.stopTimer);
-        toast.addEventListener('mouseleave', Swal.resumeTimer);
-      },
+  function reset() {
+    minute.value = initialValue;
+    second.value = initialValue;
+    hour.value = initialValue;
+    stopTimer();
+    stop_btn.style.visibility = 'hidden';
+    appearStartBtn();
+    body.style.overflowY = 'auto';
+  }
+  function stopTimer() {
+    clearInterval(timerIntervalId);
+  }
+  function appearStartBtn() {
+    start_btn.classList.remove('animate__animated', 'animate__backOutDown');
+    body.style.overflowY = 'hidden';
+    start_btn.classList.add('animate__animated', 'animate__backInUp');
+  }
+  // toast initialization
+  const Toast = Swal.mixin({
+    toast: true,
+    position: 'top-end',
+    showConfirmButton: false,
+    timer: 3000,
+    timerProgressBar: true,
+    didOpen: (toast) => {
+      toast.addEventListener('mouseenter', Swal.stopTimer);
+      toast.addEventListener('mouseleave', Swal.resumeTimer);
+    },
+  });
+  //
+  // show alert msg
+  function fireAlert(msg, status) {
+    validStatus = ['info', 'success', 'error', 'warning', 'info'];
+    if (!validStatus.includes(status))
+      throw new Error('invalid status for fireAlert function');
+    Toast.fire({
+      icon: status,
+      title: msg,
     });
-    //
-    // show alert msg
-    function fireAlert(msg, status) {
-      validStatus = ['info', 'success', 'error', 'warning', 'info'];
-      if (!validStatus.includes(status))
-        throw new Error('invalid status for fireAlert function');
-      Toast.fire({
-        icon: status,
-        title: msg,
-      });
-    }
-    //
-    function appearStartBtn() {
-      start_btn.classList.remove('animate__animated', 'animate__backOutDown');
-      body.style.overflowY = 'hidden';
-      start_btn.classList.add('animate__animated', 'animate__backInUp');
-    }
-
-    function reset() {
-      minute.value = initialValue;
-      second.value = initialValue;
-      hour.value = initialValue;
-      stopTimer();
-      stop_btn.style.visibility = 'hidden';
-      appearStartBtn();
-      body.style.overflowY = 'auto';
-    }
-    function stopTimer() {
-      clearInterval(timerIntervalId);
-    }
-
-    if (
-      hour.value === initialValue &&
-      minute.value === initialValue &&
-      second.value === initialValue
-    ) {
-      fireAlert('timer values are empty!', 'error');
-      reset();
-    }
+  }
+  //
+  const timerIntervalId = setInterval(() => {
+    body.style.overflowY = 'hidden';
     if (minute.value > 59 || second.value > 59) {
       fireAlert(
         'The value of minutes and seconds must be between 0 and 59!',
@@ -114,7 +108,7 @@ function startTimer() {
       minute.value = 59;
       hour.value--;
     }
-    if (minute.length === 1) {
+    if (minute.value.length === 1) {
       minute.value = `0${minute.value}`;
     }
     if (hour.value.length === 1) {
@@ -126,12 +120,25 @@ function startTimer() {
       hour.value = initialValue;
     }
     if (
-      hour.value === initialValue &&
+      second.value >= 0 &&
+      second.value < 4 &&
       minute.value === initialValue &&
-      second.value === initialValue
-    ) {
-      reset();
+      hour.value === initialValue
+    )
+    {
+      second.style.color = '#bd1033';
+      timerAudio.play();
     }
+      if (
+        hour.value === initialValue &&
+        minute.value === initialValue &&
+        second.value === initialValue
+      ) {
+        fireAlert('time is up 🎉😁', 'success');
+        party.confetti(header);
+        second.style.color = '#f5f5f5';
+        reset();
+      }
     stop_btn.addEventListener('click', () => {
       stopTimer();
       setTimeout(() => {
@@ -149,8 +156,16 @@ function startTimer() {
       }
     });
   }, 1000);
+  if (
+    hour.value === initialValue &&
+    minute.value === initialValue &&
+    second.value === initialValue
+  ) {
+    fireAlert('timer values are empty! 🤔', 'error');
+    reset();
+  }
 }
-// animations
+//timer emoji animations
 timer_emoji.addEventListener('click', function () {
   this.classList.add('animate__animated', 'animate__headShake');
   setTimeout(() => {
@@ -158,7 +173,7 @@ timer_emoji.addEventListener('click', function () {
   }, 1100);
 });
 //
-// key interaction
+//enter key interaction
 document.addEventListener('keypress', (e) => {
   if (e.code === 'Enter') {
     appearStopBtn();
