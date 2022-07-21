@@ -65,6 +65,11 @@ body {
     right: 38.2% !important;
   }
 }
+@media (max-width: 1400px) {
+  #timer_emoji {
+    display: none !important;
+  }
+}
 .custom-tooltip {
   --bs-tooltip-bg: var(--bs-primary);
 }
@@ -149,5 +154,5 @@ body {
   left: 0;
   height: 10px;
   background-color: #5375db;
-  transition: all 0.2s linear;
+  transition: all 100ms linear;
 }/*# sourceMappingURL=style.css.map */

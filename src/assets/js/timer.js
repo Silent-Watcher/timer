@@ -1,3 +1,5 @@
+const body = document.body;
+console.log(body);
 // buttons
 let start_btn = document.getElementById('start_timer');
 let stop_btn = document.getElementById('stop_timer');
@@ -25,8 +27,14 @@ function appearStopBtn() {
   stop_btn.style.visibility = 'visible';
   start_btn.classList.add('animate__animated', 'animate__backOutDown');
 }
-
+// custom cursor
+document.addEventListener('mousemove', (e) => {
+  cursor.style.top = `${e.pageY}px`;
+  cursor.style.left = `${e.pageX}px`;
+});
+// 
 start_btn.addEventListener('click', () => {
+  body.style.overflowY = 'hidden';
   appearStopBtn();
   startTimer();
 });
@@ -59,10 +67,12 @@ function startTimer() {
     //
     function appearStartBtn() {
       start_btn.classList.remove('animate__animated', 'animate__backOutDown');
+      body.style.overflowY = 'hidden';
       start_btn.classList.add('animate__animated', 'animate__backInUp');
     }
 
     function reset() {
+      body.style.overflowY = 'initial';
       minute.value = initialValue;
       second.value = initialValue;
       hour.value = initialValue;
@@ -157,9 +167,3 @@ document.addEventListener('keypress', (e) => {
   }
 });
 //
-// custom cursor
-document.addEventListener('mousemove', (e) => {
-  console.log(e.pageX, e.pageY);
-  cursor.style.top = `${e.pageY}px`;
-  cursor.style.left = `${e.pageX}px`;
-});
