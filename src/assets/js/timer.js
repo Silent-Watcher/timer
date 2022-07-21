@@ -1,3 +1,4 @@
+'use strict';
 const body = document.body;
 const header = document.getElementById('main_heading');
 // buttons
@@ -40,7 +41,6 @@ start_btn.addEventListener('click', () => {
   appearStopBtn();
   startTimer();
 });
-
 function startTimer() {
   function reset() {
     minute.value = initialValue;
@@ -83,10 +83,8 @@ function startTimer() {
     });
   }
   //
-
   const timerIntervalId = setInterval(() => {
     body.style.overflowY = 'hidden';
-
     second.value--;
     if (second.value < 0) {
       second.value = 59;
