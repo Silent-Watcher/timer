@@ -83,19 +83,10 @@ function startTimer() {
     });
   }
   //
+
   const timerIntervalId = setInterval(() => {
     body.style.overflowY = 'hidden';
-    if (minute.value > 59 || second.value > 59) {
-      fireAlert(
-        'The value of minutes and seconds must be between 0 and 59!',
-        'error'
-      );
-      reset();
-    }
-    if (hour.value > 24) {
-      fireAlert('The value of hours must be between 0 and 24', 'error');
-      reset();
-    }
+
     second.value--;
     if (second.value < 0) {
       second.value = 59;
@@ -162,6 +153,17 @@ function startTimer() {
     second.value === initialValue
   ) {
     fireAlert('timer values are empty! 🤔', 'error');
+    reset();
+  }
+  if (minute.value > 59 || second.value > 59) {
+    reset();
+    fireAlert(
+      'The value of minutes and seconds must be between 0 and 59!',
+      'error'
+    );
+  }
+  if (hour.value > 24) {
+    fireAlert('The value of hours must be between 0 and 24', 'error');
     reset();
   }
 }
