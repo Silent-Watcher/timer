@@ -1,30 +1,24 @@
+// buttons
 let start_btn = document.getElementById('start_timer');
 let stop_btn = document.getElementById('stop_timer');
 let reset_btn = document.getElementById('reset_timer');
+//
 let timer_emoji = document.getElementById('timer_emoji');
+// timer inputs
 let hour = document.getElementById('hour');
 let minute = document.getElementById('minute');
 let second = document.getElementById('second');
-const cursor =document.getElementById('cursor');
-
+// cursor element
+const cursor = document.getElementById('cursor');
+// tooltip initialization
 const tooltipTriggerList = document.querySelectorAll(
   '[data-bs-toggle="tooltip"]'
 );
 const tooltipList = [...tooltipTriggerList].map(
   (tooltipTriggerEl) => new bootstrap.Tooltip(tooltipTriggerEl)
 );
+//
 const initialValue = '00';
-const Toast = Swal.mixin({
-  toast: true,
-  position: 'top-end',
-  showConfirmButton: false,
-  timer: 3000,
-  timerProgressBar: true,
-  didOpen: (toast) => {
-    toast.addEventListener('mouseenter', Swal.stopTimer);
-    toast.addEventListener('mouseleave', Swal.resumeTimer);
-  },
-});
 
 function appearStopBtn() {
   stop_btn.classList.remove('animate__animated', 'animate__fadeOut');
@@ -32,29 +26,27 @@ function appearStopBtn() {
   start_btn.classList.add('animate__animated', 'animate__backOutDown');
 }
 
-document.addEventListener('keypress', (e) => {
-  if (e.code === 'Enter') {
-    appearStopBtn();
-    startTimer();
-  }
-});
-
-// animations
 start_btn.addEventListener('click', () => {
   appearStopBtn();
   startTimer();
 });
 
-timer_emoji.addEventListener('click', function () {
-  this.classList.add('animate__animated', 'animate__headShake');
-  setTimeout(() => {
-    this.classList.remove('animate__animated', 'animate__headShake');
-  }, 1100);
-});
-//
-
 function startTimer() {
   const timerIntervalId = setInterval(() => {
+    // toast initialization
+    const Toast = Swal.mixin({
+      toast: true,
+      position: 'top-end',
+      showConfirmButton: false,
+      timer: 3000,
+      timerProgressBar: true,
+      didOpen: (toast) => {
+        toast.addEventListener('mouseenter', Swal.stopTimer);
+        toast.addEventListener('mouseleave', Swal.resumeTimer);
+      },
+    });
+    //
+    // show alert msg
     function fireAlert(msg, status) {
       validStatus = ['info', 'success', 'error', 'warning', 'info'];
       if (!validStatus.includes(status))
@@ -64,7 +56,7 @@ function startTimer() {
         title: msg,
       });
     }
-
+    //
     function appearStartBtn() {
       start_btn.classList.remove('animate__animated', 'animate__backOutDown');
       start_btn.classList.add('animate__animated', 'animate__backInUp');
@@ -149,10 +141,25 @@ function startTimer() {
     });
   }, 1000);
 }
-
+// animations
+timer_emoji.addEventListener('click', function () {
+  this.classList.add('animate__animated', 'animate__headShake');
+  setTimeout(() => {
+    this.classList.remove('animate__animated', 'animate__headShake');
+  }, 1100);
+});
+//
+// key interaction
+document.addEventListener('keypress', (e) => {
+  if (e.code === 'Enter') {
+    appearStopBtn();
+    startTimer();
+  }
+});
+//
 // custom cursor
-document.addEventListener('mousemove',e=>{
-  console.log(e.pageX,e.pageY);
+document.addEventListener('mousemove', (e) => {
+  console.log(e.pageX, e.pageY);
   cursor.style.top = `${e.pageY}px`;
-  cursor.style.left= `${e.pageX}px`;
-})
+  cursor.style.left = `${e.pageX}px`;
+});
