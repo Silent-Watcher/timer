@@ -1,5 +1,4 @@
 const body = document.body;
-console.log(body);
 // buttons
 let start_btn = document.getElementById('start_timer');
 let stop_btn = document.getElementById('stop_timer');
@@ -72,7 +71,7 @@ function startTimer() {
     }
 
     function reset() {
-      body.style.overflowY = 'initial';
+      body.style.overflowY = 'visibile';
       minute.value = initialValue;
       second.value = initialValue;
       hour.value = initialValue;

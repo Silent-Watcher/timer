@@ -1,0 +1,9 @@
+::-webkit-scrollbar {
+    background-color: $scroll_dark_bg;
+    width: 5px;
+    // background-color: red;
+}
+::-webkit-scrollbar-thumb {
+    background: $scroll_handle;
+    border-radius: 20px;
+  }

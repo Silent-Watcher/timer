@@ -155,4 +155,14 @@ body {
   height: 10px;
   background-color: #5375db;
   transition: all 100ms linear;
+}
+
+::-webkit-scrollbar {
+  background-color: #232323;
+  width: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #5375db;
+  border-radius: 20px;
 }/*# sourceMappingURL=style.css.map */
