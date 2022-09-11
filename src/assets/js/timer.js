@@ -1,24 +1,23 @@
 'use strict';
-const body = document.body;
-const header = document.getElementById('main_heading');
+const $ = document;
+const body = $.body,
+  header = $.getElementById('main_heading');
 // buttons
-let start_btn = document.getElementById('start_timer');
-let stop_btn = document.getElementById('stop_timer');
-let reset_btn = document.getElementById('reset_timer');
+let start_btn = $.getElementById('start_timer'),
+  stop_btn = $.getElementById('stop_timer'),
+  reset_btn = $.getElementById('reset_timer');
 //
-let timer_emoji = document.getElementById('timer_emoji');
+let timer_emoji = $.getElementById('timer_emoji');
 // timer inputs
-let hour = document.getElementById('hour');
-let minute = document.getElementById('minute');
-let second = document.getElementById('second');
+let hour = $.getElementById('hour'),
+  minute = $.getElementById('minute'),
+  second = $.getElementById('second');
 // cursor element
-const cursor = document.getElementById('cursor');
+const cursor = $.getElementById('cursor');
 // timer audio
-const timerAudio = document.getElementById('timer_audio');
+const timerAudio = $.getElementById('timer_audio');
 // tooltip initialization
-const tooltipTriggerList = document.querySelectorAll(
-  '[data-bs-toggle="tooltip"]'
-);
+const tooltipTriggerList = $.querySelectorAll('[data-bs-toggle="tooltip"]');
 const tooltipList = [...tooltipTriggerList].map(
   (tooltipTriggerEl) => new bootstrap.Tooltip(tooltipTriggerEl)
 );
@@ -31,9 +30,9 @@ function appearStopBtn() {
   start_btn.classList.add('animate__animated', 'animate__backOutDown');
 }
 // custom cursor
-document.addEventListener('mousemove', (e) => {
-  cursor.style.top = `${e.pageY}px`;
-  cursor.style.left = `${e.pageX}px`;
+$.addEventListener('mousemove', (event) => {
+  cursor.style.top = `${event.pageY}px`;
+  cursor.style.left = `${event.pageX}px`;
 });
 //
 start_btn.addEventListener('click', () => {
@@ -90,19 +89,14 @@ function startTimer() {
       second.value = 59;
       minute.value--;
     }
-    if (second.value.length === 1) {
-      second.value = `0${second.value}`;
-    }
+    second.value = second.value.padStart(2, '0');
     if (minute.value < 0) {
       minute.value = 59;
       hour.value--;
     }
-    if (minute.value.length === 1) {
-      minute.value = `0${minute.value}`;
-    }
-    if (hour.value.length === 1) {
-      hour.value = `0${hour.value}`;
-    }
+    minute.value = minute.value.padStart(2, '0');
+    hour.value = hour.value.padStart(2, '0');
+
     if (hour.value < 0) {
       minute.value = initialValue;
       second.value = initialValue;
@@ -113,21 +107,20 @@ function startTimer() {
       second.value < 4 &&
       minute.value === initialValue &&
       hour.value === initialValue
-    )
-    {
+    ) {
       second.style.color = '#bd1033';
       timerAudio.play();
     }
-      if (
-        hour.value === initialValue &&
-        minute.value === initialValue &&
-        second.value === initialValue
-      ) {
-        fireAlert('time is up 🎉😁', 'success');
-        party.confetti(header);
-        second.style.color = '#f5f5f5';
-        reset();
-      }
+    if (
+      hour.value === initialValue &&
+      minute.value === initialValue &&
+      second.value === initialValue
+    ) {
+      fireAlert('time is up 🎉😁', 'success');
+      party.confetti(header);
+      second.style.color = '#f5f5f5';
+      reset();
+    }
     stop_btn.addEventListener('click', () => {
       stopTimer();
       setTimeout(() => {
@@ -174,8 +167,8 @@ timer_emoji.addEventListener('click', function () {
 });
 //
 //enter key interaction
-document.addEventListener('keypress', (e) => {
-  if (e.code === 'Enter') {
+$.addEventListener('keypress', (event) => {
+  if (event.code === 'Enter') {
     appearStopBtn();
     startTimer();
   }
