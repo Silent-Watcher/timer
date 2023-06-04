@@ -474,7 +474,7 @@ export default defineConfig({
             form_factor: 'narrow',
           },
           {
-            src: './screenShot1.jpg',
+            src: './screenShot2.jpg',
             type: 'image/jpg',
             sizes: '1080x1920',
             form_factor: 'narrow',
