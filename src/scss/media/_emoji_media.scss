@@ -1,0 +1,11 @@
+@media (min-width:1400px) {
+    #timer_emoji{
+        right: 38.2%!important;
+    }
+}
+@media (max-width:1400px) {
+    #timer_emoji{
+       display: none!important;
+    }
+}
+

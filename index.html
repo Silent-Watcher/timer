@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Timer.js</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <link rel="stylesheet" href="./src/scss/style.scss">
+  </head>
+  <body class="vh-100">
+    <div class="container-fluid"> 
+      <div class="container"> 
+        <audio id="timer_audio" src="audio/countdown voice.mp3"></audio>
+        <div class="d-none d-xxl-block position-absolute rounded-circle" id="cursor"> </div>
+        <div class="row text-center">
+          <h1 class="fw-bold position-relative user-select-none animate__animated animate__bounce" id="main_heading">Welcome to timer.js<span class="fs-3 position-absolute" id="timer_emoji">⏱️</span></h1>
+        </div>
+        <div class="row">
+          <main class="col-12 col-md-6 offset-md-3 d-flex" id="timer_input"> 
+            <input class="w-100 bg-transparent border-0 text-center" id="hour" type="number" name="" value="00" min="00" max="24"><span>:</span>
+            <input class="w-100 bg-transparent border-0 text-center" id="minute" type="number" name="" value="00" min="00" max="60"><span>:</span>
+            <input class="w-100 bg-transparent border-0 text-center" id="second" type="number" name="" value="00" min="00" max="60">
+          </main>
+        </div>
+        <div class="row"> 
+          <section class="col-8 offset-2 col-md-6 offset-md-3 col-lg-4 offset-lg-4 d-flex justify-content-around" id="timer_buttons">
+            <button class="btn d-inline-flex align-items-center position-relative animate__animated animate__tada" id="start_timer"> <i class="fa-solid fa-play"></i></button>
+            <button class="pulse d-inline-flex align-items-center justify-content-center bg-transparent border-0 p-0 rounded-circle" id="stop_timer"> <i class="fa-solid fa-stop"></i></button>
+            <button class="btn btn-primary bg-transparent border-0 d-inline-flex align-items-center" id="reset_timer" data-bs-toggle="tooltip" data-bs-title="Reset timer" data-bs-custom-class="custom-tooltip"> <i class="fa-solid fa-arrow-rotate-left"></i></button>
+          </section>
+        </div>
+        <div class="row text-center">
+          <footer class="user-select-none" id="copyright">Made with <span>❤ </span>by <a class="text-decoration-none" href="https://github.com/Silent-Watcher" target="_blank">silentWatcher</a>
+            <time>2022</time> ©
+          </footer>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+  <script type="module" src="src/js/timer.js"> </script>
+</html>

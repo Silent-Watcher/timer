@@ -1,0 +1,20 @@
+@charset 'utf-8';
+@import '../../node_modules/animate.css/animate.min.css';
+@import 'global/colors';
+@import 'global/fonts';
+@import 'global/reset';
+@import 'media/header_media';
+@import 'media/timer_media';
+@import 'media/copyright_media';
+@import 'media/buttons_media';
+@import 'media/emoji_media';
+@import 'components/custom_tooltip';
+@import 'components/header';
+@import 'components/timer';
+@import 'components/buttons';
+@import 'components/copyright';
+@import 'components/cursor';
+@import 'components/scrollbar';
+@import 'components/pulse';
+
+
