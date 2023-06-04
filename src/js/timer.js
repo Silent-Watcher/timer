@@ -1,7 +1,6 @@
 'use strict';
 import Swal from 'sweetalert2';
-import party from "party-js";
-
+import party from 'party-js';
 
 const $ = document;
 const body = $.body,
@@ -178,3 +177,6 @@ $.addEventListener('keypress', (event) => {
   }
 });
 //
+// set copyright time
+let now = new Date();
+document.querySelector('#copyright-year').innerHTML = now.getFullYear();
