@@ -36,6 +36,8 @@ It allows you to set a specific time duration and notifies you when the time is 
 
 Here is a preview of the Timer in action:
 
+![timer preview](https://iili.io/H4qTSn9.gif)
+
 ## Demo
 
 You can try out the Timer by following this [demo link.](https://link-url-here.org)
