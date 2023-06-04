@@ -14,7 +14,8 @@ export default defineConfig({
         theme_color: '#232323',
         orientation: 'any',
         background_color: '#232323',
-        scope: '/',
+        start_url:'https://silent-watcher.github.io/timer/',
+        scope: '/timer/',
         display: 'fullscreen',
         icons: [
           {
