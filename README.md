@@ -1,5 +1,5 @@
 
-![timer.js banner]([https://assets.digitalocean.com/articles/alligator/boo.svg "timer.js"](https://github.com/Silent-Watcher/timer/blob/master/public/img/banner.png))
+![timer.js banner](https://github.com/Silent-Watcher/timer/blob/master/public/img/banner.png)
 
 # Timer.js
 
@@ -84,6 +84,17 @@ yarn dev
  - [The package manager used in the project.](https://yarnpkg.com/)
  - [The animations used in the project.](https://animate.style/)
  - [the confetti effect used in the project](https://party.js.org/)
+
+## Technologies
+
+<p>
+<a target="_blank" rel="noopener noreferrer nofollow" href="https://camo.githubusercontent.com/96a539d0f4942d7f622d96b43372b8e6038ff508e690609b1ffc1fc3108025bb/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f2d48544d4c352d3030303f266c6f676f3d68746d6c35266c6f676f436f6c6f723d453334463236"><img src="https://camo.githubusercontent.com/96a539d0f4942d7f622d96b43372b8e6038ff508e690609b1ffc1fc3108025bb/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f2d48544d4c352d3030303f266c6f676f3d68746d6c35266c6f676f436f6c6f723d453334463236" alt="HTML5" data-canonical-src="https://img.shields.io/badge/-HTML5-000?&amp;logo=html5&amp;logoColor=E34F26" style="max-width: 100%;"></a>
+<a target="_blank" rel="noopener noreferrer nofollow" href="https://camo.githubusercontent.com/9aa9859905af6a3b26edde4a73cf1974ed9ae204b16f24f4b704b5cafe1159c2/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f2d4353532d3030303f266c6f676f3d63737333266c6f676f436f6c6f723d313537324236"><img src="https://camo.githubusercontent.com/9aa9859905af6a3b26edde4a73cf1974ed9ae204b16f24f4b704b5cafe1159c2/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f2d4353532d3030303f266c6f676f3d63737333266c6f676f436f6c6f723d313537324236" alt="CSS" data-canonical-src="https://img.shields.io/badge/-CSS-000?&amp;logo=css3&amp;logoColor=1572B6" style="max-width: 100%;"></a>
+ <a target="_blank" rel="noopener noreferrer nofollow" href="https://camo.githubusercontent.com/4b4858ab474b4aaf1d67602c602f1149a7666b04563d1e674a21922d66537b14/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f2d4a6176615363726970742d3030303f266c6f676f3d4a617661536372697074266c6f676f436f6c6f723d646463353038"><img src="https://camo.githubusercontent.com/4b4858ab474b4aaf1d67602c602f1149a7666b04563d1e674a21922d66537b14/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f2d4a6176615363726970742d3030303f266c6f676f3d4a617661536372697074266c6f676f436f6c6f723d646463353038" alt="JavaScript" data-canonical-src="https://img.shields.io/badge/-JavaScript-000?&amp;logo=JavaScript&amp;logoColor=ddc508" style="max-width: 100%;"></a>
+<a target="_blank" rel="noopener noreferrer nofollow" href="https://camo.githubusercontent.com/404617cc3b075fbc7b1483a9b43d0f6be4aeec1bbd464bf51651c572414009c7/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f2d536173732d3030303f266c6f676f3d53617373"><img src="https://camo.githubusercontent.com/404617cc3b075fbc7b1483a9b43d0f6be4aeec1bbd464bf51651c572414009c7/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f2d536173732d3030303f266c6f676f3d53617373" alt="Sass" data-canonical-src="https://img.shields.io/badge/-Sass-000?&amp;logo=Sass" style="max-width: 100%;"></a>
+<a target="_blank" rel="noopener noreferrer nofollow" href="https://camo.githubusercontent.com/9931d101c80aa7cef99bbc377a51936afeb68674645815f815b851fd8de8c470/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f2d566974652d3030303f266c6f676f3d56697465"><img src="https://camo.githubusercontent.com/9931d101c80aa7cef99bbc377a51936afeb68674645815f815b851fd8de8c470/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f2d566974652d3030303f266c6f676f3d56697465" alt="Vite" data-canonical-src="https://img.shields.io/badge/-Vite-000?&amp;logo=Vite" style="max-width: 100%;"></a>
+</p>
+
 
 ## Contributing
 
