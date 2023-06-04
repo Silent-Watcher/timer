@@ -39,7 +39,7 @@ Here is a preview of the Timer in action:
 
 ## Demo
 
-You can try out the Timer by following this [demo link.](https://link-url-here.org)
+You can try out the Timer by following this [demo link.](https://silent-watcher.github.io/timer/)
 
 ## Prerequisites
 
