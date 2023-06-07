@@ -4,7 +4,7 @@ import { defineConfig } from 'vite';
 export default defineConfig({
   plugins: [
     VitePWA({
-      includeAssets: ['favicon.ico', 'apple-touch-icon.png', 'masked-icon.svg'],
+      // includeAssets: ['favicon.ico', 'apple-touch-icon.png', 'masked-icon.svg'],
       injectRegister: 'auto',
       manifest: {
         name: 'Timer.js',
@@ -14,10 +14,15 @@ export default defineConfig({
         theme_color: '#232323',
         orientation: 'any',
         background_color: '#232323',
-        start_url:'https://silent-watcher.github.io/timer/',
-        scope: '/timer/',
+        start_url: 'https://silent-watcher.github.io/timer/',
+        scope: '/',
         display: 'fullscreen',
         icons: [
+          {
+            src: 'img/timer.png',
+            sizes: '840x859',
+            purpose: 'maskable',
+          },
           {
             src: 'windows11/SmallTile.scale-100.png',
             sizes: '71x71',
