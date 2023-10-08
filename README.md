@@ -40,6 +40,12 @@ Here is a preview of the Timer in action:
 ## Demo
 
 You can try out the Timer by following this [demo link.](https://silent-watcher.github.io/timer/)
+<p>
+ 
+[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/Silent-Watcher/timer)
+
+</p>
+
 
 ## Prerequisites
 
