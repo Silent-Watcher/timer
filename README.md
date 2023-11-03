@@ -1,7 +1,7 @@
 
 ![timer.js banner](https://github.com/Silent-Watcher/timer/blob/master/public/img/banner.png)
 
-# Timer.js
+# Timer.js 🕰️
 
 The Timer App is a versatile and intuitive application built with JavaScript that allows you to set and manage timers effortlessly. Whether you need a simple timer for tracking short durations or a countdown for important events, the Timer App has got you covered.
 
