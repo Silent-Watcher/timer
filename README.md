@@ -1,5 +1,5 @@
 
-![timer.js banner](https://github.com/Silent-Watcher/timer/blob/master/public/img/banner.png)
+![timer.js banner](https://github.com/Silent-Watcher/timer/blob/master/.github/timer%20banner.png)
 
 # Timer.js 🕰️
 
